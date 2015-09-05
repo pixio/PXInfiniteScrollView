@@ -1,0 +1,27 @@
+{
+  "name": "PXInfiniteScrollView",
+  "version": "0.1.0",
+  "summary": "Pages. It loops.  It's infinite.",
+  "description": "                       It has uses.\n",
+  "homepage": "https://git.pixio.com/",
+  "license": "MIT",
+  "authors": {
+    "Daniel Blakemore": "DanBlakemore@gmail.com"
+  },
+  "source": {
+    "git": "git@git.pixio.com:ios-pods/pxinfinitescrollview.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "InfiniteScrollView": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "public_header_files": "Pod/Classes/**/*.h",
+  "frameworks": "UIKit"
+}

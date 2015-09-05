@@ -1,0 +1,12 @@
+source 'git@git.pixio.com:pixio-libraries/specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'PXInfiniteScrollView', :exclusive => true do
+  pod "PXInfiniteScrollView", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "PXInfiniteScrollView", :path => "../"
+
+
+end

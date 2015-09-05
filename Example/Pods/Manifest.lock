@@ -1,0 +1,14 @@
+PODS:
+  - PXInfiniteScrollView (0.1.0)
+
+DEPENDENCIES:
+  - PXInfiniteScrollView (from `../`)
+
+EXTERNAL SOURCES:
+  PXInfiniteScrollView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PXInfiniteScrollView: 95fe20752750d4f66f19ee41412061e97bbfe2df
+
+COCOAPODS: 0.36.4
