@@ -45,7 +45,7 @@
     [self removeConstraints:_constraints];
 
     NSDictionary* views = NSDictionaryOfVariableBindings(_faceScrollView, _bodyScrollView);
-    NSDictionary* metrics = @{@"sp":@153, @"fh":@78};
+    NSDictionary* metrics = @{@"sp":@([self bounds].size.height * 0.315), @"fh":@78};
     
     // Horizontal
     [_constraints addObjectsFromArray:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_bodyScrollView]|" options:0 metrics:metrics views:views]];
