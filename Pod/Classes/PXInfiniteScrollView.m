@@ -27,6 +27,27 @@
 
 #import "PXInfiniteScrollView.h"
 
+
+//! Safe mod which ensures that the modulus is positive
+static inline NSInteger posMod(NSInteger numerator, NSInteger denominator)
+{
+    NSInteger value = numerator % denominator;
+    if (value < 0)
+    {
+        value += denominator;
+    }
+    
+    return value;
+}
+
+
+@interface PXInfiniteScrollView ()
+
+//! Number of pages that should be added on each side of the content for better scrolling behavior
+@property (nonatomic, assign) NSInteger buffer;
+
+@end
+
 @implementation PXInfiniteScrollView
 
 - (id)initWithFrame:(CGRect)frame
@@ -42,9 +63,10 @@
     [self setBounces:FALSE];
     [self setShowsHorizontalScrollIndicator:FALSE];
     [self setShowsVerticalScrollIndicator:FALSE];
-
-    _pages = [NSArray array];
+    [self setDecelerationRate:UIScrollViewDecelerationRateFast];
+    
     _scrollDirection = PXInfiniteScrollViewDirectionHorizontal;
+    _buffer = 5;
 
     return self;
 }
@@ -69,11 +91,6 @@
     [self layoutPages];
 }
 
-- (NSUInteger)pageCount
-{
-    return [_pages count];
-}
-
 - (void) setScrollDirection:(PXInfiniteScrollViewDirection)scrollDirection
 {
     _scrollDirection = scrollDirection;
@@ -84,31 +101,32 @@
 {
     CGRect frame = [self bounds];
     frame.origin = CGPointZero;
+    
+    CGFloat pageSize = [self pageSize];
+    UIOffset offset = UIOffsetMake(frame.size.width, frame.size.height);
 
-    // Add 2 so there is one page before and after all the pages
-    NSInteger count = [_pages count] + 2;
-    [super setScrollEnabled:([_pages count] > 1)];
+    NSInteger count = [self pageCount];
+    [super setScrollEnabled:(count > 1)];
 
+    // Set the content size
     if (_scrollDirection == PXInfiniteScrollViewDirectionHorizontal)
     {
-        [self setContentSize:CGSizeMake(frame.size.width * count, frame.size.height)];
+        [self setContentSize:CGSizeMake(frame.size.width * (count + _buffer * 2), frame.size.height)];
+        offset.vertical = 0.0f;
+        frame.origin.x = _buffer * pageSize;
     }
     else
     {
-        [self setContentSize:CGSizeMake(frame.size.width, frame.size.height * count)];
+        [self setContentSize:CGSizeMake(frame.size.width, frame.size.height * (count + _buffer * 2))];
+        offset.horizontal = 0.0f;
+        frame.origin.y = _buffer * pageSize;
     }
 
+    // Set frames for each page view
     for (UIView* view in _pages)
     {
-        if (_scrollDirection == PXInfiniteScrollViewDirectionHorizontal)
-        {
-            frame = CGRectOffset(frame, frame.size.width, 0.0f);
-        }
-        else
-        {
-            frame = CGRectOffset(frame, 0.0f, frame.size.height);
-        }
         [view setFrame:CGRectIntegral(frame)];
+        frame = CGRectOffset(frame, offset.horizontal, offset.vertical);
     }
 
     [self setCurrentPage:0];
@@ -116,9 +134,7 @@
 
 - (NSInteger) currentPage
 {
-    NSInteger offset = (NSInteger) ((_scrollDirection == PXInfiniteScrollViewDirectionHorizontal) ? [self contentOffset].x : [self contentOffset].y);
-    NSInteger pageSize = (NSInteger) ((_scrollDirection == PXInfiniteScrollViewDirectionHorizontal) ? [self bounds].size.width : [self bounds].size.height);
-
+    NSInteger pageSize = (NSInteger) [self pageSize];
     NSInteger pageCount = [_pages count];
 
     if (pageSize == 0 || pageCount == 0)
@@ -126,15 +142,14 @@
         return 0;
     }
 
-    offset -= pageSize;
-    if (offset < 0)
-    {
-        offset += pageSize * pageCount;
-    }
+    // Unadjust the offset
+    NSInteger offset = (NSInteger) [self offset];
+    offset = posMod(offset - pageSize * _buffer, pageCount * pageSize);
 
+    // Determine the center point of the page
     NSInteger center = offset + pageSize / 2;
 
-    return (center / pageSize) % pageCount;
+    return posMod(center / pageSize, pageCount);
 }
 
 - (void)setCurrentPage:(NSInteger)currentPage
@@ -145,6 +160,7 @@
 - (void) setCurrentPage:(NSInteger)page animated:(BOOL)animated
 {
     CGFloat pageSize = (_scrollDirection == PXInfiniteScrollViewDirectionHorizontal) ? [self bounds].size.width : [self bounds].size.height;
+    NSInteger currentPage = [self currentPage];
 
     // adjust the page so that is no more than pageCount from the current page
     if (pageSize <= 0.0f || [_pages count] == 0)
@@ -153,20 +169,35 @@
     }
     else
     {
-        NSInteger pageDifference = page - [self currentPage];
-        page -= pageDifference - pageDifference % (NSInteger)[_pages count];
+        NSInteger pageDifference = page - currentPage;
+        page -= posMod(pageDifference - pageDifference, (NSInteger)[_pages count]);
     }
 
-    CGFloat offset = pageSize * page + pageSize;
+    CGFloat oldOffset = pageSize * currentPage + pageSize * _buffer;
+    CGFloat offset = pageSize * page + pageSize * _buffer;
+
 
     if (_scrollDirection == PXInfiniteScrollViewDirectionHorizontal)
     {
+        if (animated == TRUE)
+        {
+            [self setContentOffset:CGPointMake(oldOffset, 0.0f) animated:FALSE];
+        }
         [self setContentOffset:CGPointMake(offset, 0.0f) animated:animated];
     }
     else
     {
+        if (animated == TRUE)
+        {
+            [self setContentOffset:CGPointMake(0.0f, oldOffset) animated:FALSE];
+        }
         [self setContentOffset:CGPointMake(0.0f, offset) animated:animated];
     }
+}
+
+- (UIView*) currentPageView
+{
+    return _pages[[self currentPage]];
 }
 
 #pragma mark UIScrollView methods
@@ -174,74 +205,60 @@
 - (void) setContentOffset:(CGPoint)contentOffset
 {
     NSInteger pageCount = [_pages count];
-    BOOL horizontal = (_scrollDirection == PXInfiniteScrollViewDirectionHorizontal);
 
     // Don't bother adjusting frames or the offset if there are no pages
-    if ([_pages count] == 0)
+    if (pageCount <= 1)
     {
         [super setContentOffset:contentOffset];
         return;
     }
-
-    CGRect frame = [self bounds];
-    frame.origin = CGPointZero;
-
-    CGFloat pageSize = horizontal ? frame.size.width : frame.size.height;
+    
+    BOOL horizontal = (_scrollDirection == PXInfiniteScrollViewDirectionHorizontal);
+    CGFloat pageSize = [self pageSize];
+    
+    
     CGFloat currentOffset = horizontal ? contentOffset.x : contentOffset.y;
-    CGFloat firstPageOffset = pageSize;
-    CGFloat lastPageOffset = pageSize * pageCount;
-    
-    if (pageSize > 0.0f && currentOffset <= 0.0f)
-    {
-        currentOffset = pageSize;
-    }
-    
+
     // Whether or not the content offset should 'jump'. This works great when physicially dragging,
     // but can problematic when jumping a large distance programatically
-    BOOL adjustContentOffset = [self isTracking] == TRUE || [self isDecelerating] == FALSE;
-
-    // Calculate offsets for the frames of the first and last page. Also, adjust the offset to jump if necessary
-
-    if (currentOffset < pageSize)
+    BOOL adjustContentOffset =
+        ([self isTracking] && [self isDragging] && ![self isDecelerating]) || // Touching and not decelerating
+        (![self isTracking] && ![self isDragging] && ![self isDecelerating]); // Not touching and not decelerating
+    
+    // Adjust the content offset so that it within the area that it should be
+    if (adjustContentOffset)
     {
-        // Overscroll to the left (or top)
-        if (adjustContentOffset)
+        CGFloat firstPageOffset = _buffer * pageSize;
+        currentOffset = firstPageOffset + fmod(currentOffset - firstPageOffset, pageSize * pageCount);
+        if (horizontal)
         {
-            currentOffset += pageSize * pageCount;
-            firstPageOffset = pageSize * (pageCount + 1);
+            contentOffset.x = currentOffset;
         }
         else
         {
-            firstPageOffset = pageSize;
-            lastPageOffset = 0.0f;
+            contentOffset.y = currentOffset;
         }
     }
-    else if (currentOffset > pageSize * pageCount)
-    {
-        // Overscroll to the right (or bottom)
-        if (adjustContentOffset)
-        {
-            currentOffset -= pageSize * pageCount;
-            firstPageOffset = pageSize;
-            lastPageOffset = 0.0f;
-        }
-        else
-        {
-            firstPageOffset = pageSize * (pageCount + 1);
-        }
-    }
+
+    // Get the page indices of the two views that should be visible.
+    NSInteger leftPageIndex = (NSInteger) floor(currentOffset / pageSize);
+    NSInteger viewIndex = posMod(leftPageIndex - _buffer, pageCount);
+    NSInteger nextViewIndex = posMod(viewIndex + 1, pageCount);
+
+    
+    // Adjust the page view frames so they appear seamless
+    CGRect frame = CGRectZero;
+    frame.size = [self bounds].size;
 
     if (horizontal)
     {
-        contentOffset.x = currentOffset;
-        [[_pages firstObject] setFrame:CGRectIntegral(CGRectOffset(frame, firstPageOffset, 0.0f))];
-        [[_pages lastObject] setFrame:CGRectIntegral(CGRectOffset(frame, lastPageOffset, 0.0f))];
+        [_pages[nextViewIndex] setFrame:CGRectIntegral(CGRectOffset(frame, (leftPageIndex + 1) * pageSize, 0.0f))];
+        [_pages[viewIndex] setFrame:CGRectIntegral(CGRectOffset(frame, leftPageIndex * pageSize, 0.0f))];
     }
     else
     {
-        contentOffset.y = currentOffset;
-        [[_pages firstObject] setFrame:CGRectIntegral(CGRectOffset(frame, 0.0f, firstPageOffset))];
-        [[_pages lastObject] setFrame:CGRectIntegral(CGRectOffset(frame, 0.0f, lastPageOffset))];
+        [_pages[nextViewIndex] setFrame:CGRectIntegral(CGRectOffset(frame, 0.0f, (leftPageIndex + 1) * pageSize))];
+        [_pages[viewIndex] setFrame:CGRectIntegral(CGRectOffset(frame, 0.0f, leftPageIndex * pageSize))];
     }
 
 
@@ -258,14 +275,10 @@
     // NOP
 }
 
-- (UIView*) currentPageView
-{
-    return _pages[[self currentPage]];
-}
-
 - (void) setFrame:(CGRect)frame
 {
     CGRect oldFrame = [self frame];
+    NSInteger oldPage = [self currentPage];
 
     [super setFrame:frame];
 
@@ -275,14 +288,14 @@
     }
 
     // Layout pages if necessary
-    NSInteger page = [self currentPage];
     [self layoutPages];
-    [self setCurrentPage:page];
+    [self setCurrentPage:oldPage];
 }
 
 - (void) setBounds:(CGRect)bounds
 {
     CGRect oldBounds = [self bounds];
+    NSInteger oldPage = [self currentPage];
 
     [super setBounds:bounds];
 
@@ -292,9 +305,25 @@
     }
 
     // Layout pages if necessary
-    NSInteger page = [self currentPage];
     [self layoutPages];
-    [self setCurrentPage:page];
+    [self setCurrentPage:oldPage];
+}
+
+#pragma mark - Helper methods
+
+- (NSUInteger) pageCount
+{
+    return [_pages count];
+}
+
+- (CGFloat) offset
+{
+    return ((_scrollDirection == PXInfiniteScrollViewDirectionHorizontal) ? [self contentOffset].x : [self contentOffset].y);
+}
+
+- (CGFloat) pageSize
+{
+    return ((_scrollDirection == PXInfiniteScrollViewDirectionHorizontal) ? [self bounds].size.width : [self bounds].size.height);
 }
 
 @end
