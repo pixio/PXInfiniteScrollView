@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PXInfiniteScrollView"
-  s.version          = "0.1.2"
+  s.version          = "0.2.0"
   s.summary          = "Pages. It loops.  It's infinite."
   s.description      = <<-DESC
                        It has uses. Just don't scroll too fast.
