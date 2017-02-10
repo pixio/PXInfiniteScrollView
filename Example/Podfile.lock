@@ -1,14 +1,16 @@
 PODS:
-  - PXInfiniteScrollView (0.1.2)
+  - PXInfiniteScrollView (0.2.0)
 
 DEPENDENCIES:
   - PXInfiniteScrollView (from `../`)
 
 EXTERNAL SOURCES:
   PXInfiniteScrollView:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  PXInfiniteScrollView: fcf6c029a5c56c6ad4fab5668b489242dd985cf2
+  PXInfiniteScrollView: 32552cdd3f0ffb62db6e0acdd9259c9872d34076
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 5210ec298f3f1268e01e676f9030b14c6a2de2db
+
+COCOAPODS: 1.2.0

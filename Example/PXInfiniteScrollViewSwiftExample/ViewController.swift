@@ -13,8 +13,8 @@ class ViewController: UIViewController {
         return view as! View
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     override func loadView() {
@@ -27,13 +27,13 @@ class ViewController: UIViewController {
         title = "PX Infinite Scroll View"
         
         view.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
-        edgesForExtendedLayout = UIRectEdge.None
+        edgesForExtendedLayout = UIRectEdge()
         
         let faces: [String] = ["andres", "andrew", "ben", "calvin", "daniel", "dillon", "hunsaker", "julie", "jun", "kevin", "lorenzo", "matt", "seth", "spencer", "victor", "william"]
         var faceViews: [UIImageView] = []
         for face in faces {
             let imageView: UIImageView = UIImageView(image: UIImage(named: face))
-            imageView.contentMode = UIViewContentMode.ScaleAspectFit
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
             faceViews.append(imageView)
         }
         
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         var animalViews: [UIImageView] = []
         for animal in animals {
             let imageView: UIImageView = UIImageView(image: UIImage(named: animal))
-            imageView.contentMode = UIViewContentMode.ScaleAspectFit
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
             animalViews.append(imageView)
         }
         contentView.faceScrollView.pages = faceViews

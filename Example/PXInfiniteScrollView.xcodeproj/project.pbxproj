@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		168ED6B021B8BC69F50D4870 /* libPods-PXInfiniteScrollViewSwiftExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F1227510FBE001125775B6 /* libPods-PXInfiniteScrollViewSwiftExample.a */; };
 		2C53E7481B275BA000123705 /* PXView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C53E7471B275BA000123705 /* PXView.m */; };
-		498039E1FD4D6ED1925E2650 /* libPods-PXInfiniteScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 985F52D93A6D99F00DD0B10A /* libPods-PXInfiniteScrollView.a */; };
-		55142AB81C77A1B400A9696D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55142AB51C77A1B400A9696D /* AppDelegate.swift */; };
-		55142AB91C77A1B400A9696D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55142AB61C77A1B400A9696D /* View.swift */; };
-		55142ABA1C77A1B400A9696D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55142AB71C77A1B400A9696D /* ViewController.swift */; };
+		3403F43284DC54EDCA2BE178 /* libPods-PXInfiniteScrollViewSwiftExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB4A3808E84207EBC0A6097 /* libPods-PXInfiniteScrollViewSwiftExampleTests.a */; };
+		4B3E36D41E4D3ADA00E15A7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E36D31E4D3ADA00E15A7E /* AppDelegate.swift */; };
+		4B3E36D61E4D3ADA00E15A7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E36D51E4D3ADA00E15A7E /* ViewController.swift */; };
+		4B3E36E91E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3E36E81E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests.swift */; };
+		4B3E36F11E4D3B1F00E15A7E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55142AB61C77A1B400A9696D /* View.swift */; };
+		4B3E36F21E4D3B5F00E15A7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		4B3E36F41E4D3CC800E15A7E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B3E36F31E4D3CC800E15A7E /* Default-568h@2x.png */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -25,10 +29,18 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		C8EDE412FA8591AD06143DF7 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A378737C36722F1669FB66E0 /* libPods-Tests.a */; };
+		ADCDB53ECC33F9831A093432 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C5DB53CE7E8276B42D5680 /* libPods-Tests.a */; };
+		FB75C7668CEF937BC19D69FB /* libPods-PXInfiniteScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2886E623D412893F6E9C856C /* libPods-PXInfiniteScrollView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4B3E36E51E4D3ADB00E15A7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B3E36D01E4D3ADA00E15A7E;
+			remoteInfo = PXInfiniteScrollViewSwiftExample;
+		};
 		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
@@ -39,14 +51,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1599E948ECF31779D12CF7F7 /* Pods-PXInfiniteScrollViewSwiftExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXInfiniteScrollViewSwiftExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PXInfiniteScrollViewSwiftExampleTests/Pods-PXInfiniteScrollViewSwiftExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		24F1227510FBE001125775B6 /* libPods-PXInfiniteScrollViewSwiftExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PXInfiniteScrollViewSwiftExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2886E623D412893F6E9C856C /* libPods-PXInfiniteScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PXInfiniteScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C53E7461B275BA000123705 /* PXView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXView.h; sourceTree = "<group>"; };
 		2C53E7471B275BA000123705 /* PXView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXView.m; sourceTree = "<group>"; };
 		348B1E52B77E15340EEE2746 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		3FD90B744E721C0913838E81 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		55142AB41C77A1B400A9696D /* PXInfiniteScrollView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PXInfiniteScrollView-Bridging-Header.h"; sourceTree = "<group>"; };
-		55142AB51C77A1B400A9696D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55142AB61C77A1B400A9696D /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		55142AB71C77A1B400A9696D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B3E36D11E4D3ADA00E15A7E /* PXInfiniteScrollViewSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXInfiniteScrollViewSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B3E36D31E4D3ADA00E15A7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B3E36D51E4D3ADA00E15A7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B3E36DF1E4D3ADA00E15A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B3E36E41E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PXInfiniteScrollViewSwiftExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B3E36E81E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXInfiniteScrollViewSwiftExampleTests.swift; sourceTree = "<group>"; };
+		4B3E36EA1E4D3ADB00E15A7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B3E36F31E4D3CC800E15A7E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		55142AB41C77A1B400A9696D /* PXInfiniteScrollView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PXInfiniteScrollView-Bridging-Header.h"; path = "../PXInfiniteScrollView/PXInfiniteScrollView-Bridging-Header.h"; sourceTree = "<group>"; };
+		55142AB61C77A1B400A9696D /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = View.swift; path = ../PXInfiniteScrollView/View.swift; sourceTree = "<group>"; };
+		5DD4701B4288F9F50C1AA8FE /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PXInfiniteScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PXInfiniteScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,16 +87,35 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		71D4D433928D6323AFE991F0 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9096C68A55E3B01F9CE8EECD /* Pods-PXInfiniteScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXInfiniteScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-PXInfiniteScrollView/Pods-PXInfiniteScrollView.release.xcconfig"; sourceTree = "<group>"; };
-		985F52D93A6D99F00DD0B10A /* libPods-PXInfiniteScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PXInfiniteScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A378737C36722F1669FB66E0 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3509E80C471601E4A48CBC9 /* Pods-PXInfiniteScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXInfiniteScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PXInfiniteScrollView/Pods-PXInfiniteScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		6DC389E1BCEF7B791F18B091 /* Pods-PXInfiniteScrollViewSwiftExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXInfiniteScrollViewSwiftExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PXInfiniteScrollViewSwiftExampleTests/Pods-PXInfiniteScrollViewSwiftExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71F2137748ABD370BEAFA5A4 /* Pods-PXInfiniteScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXInfiniteScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-PXInfiniteScrollView/Pods-PXInfiniteScrollView.release.xcconfig"; sourceTree = "<group>"; };
+		7530693AB6C012ECE6E50509 /* Pods-PXInfiniteScrollViewSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXInfiniteScrollViewSwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PXInfiniteScrollViewSwiftExample/Pods-PXInfiniteScrollViewSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
+		7EB4A3808E84207EBC0A6097 /* libPods-PXInfiniteScrollViewSwiftExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PXInfiniteScrollViewSwiftExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A715F45C9962588E521B03B /* Pods-PXInfiniteScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXInfiniteScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PXInfiniteScrollView/Pods-PXInfiniteScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		D6F27D6A289A2EE64A43E3F3 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE10B1B50CE706AADBBC4AF5 /* Pods-PXInfiniteScrollViewSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PXInfiniteScrollViewSwiftExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PXInfiniteScrollViewSwiftExample/Pods-PXInfiniteScrollViewSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
+		F0C5DB53CE7E8276B42D5680 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E66A42EEFFDC48D284579B /* PXInfiniteScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PXInfiniteScrollView.podspec; path = ../PXInfiniteScrollView.podspec; sourceTree = "<group>"; };
 		FC77DDDCE9865CCE20A2D343 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4B3E36CE1E4D3ADA00E15A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				168ED6B021B8BC69F50D4870 /* libPods-PXInfiniteScrollViewSwiftExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B3E36E11E4D3ADB00E15A7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3403F43284DC54EDCA2BE178 /* libPods-PXInfiniteScrollViewSwiftExampleTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F587195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,7 +123,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				498039E1FD4D6ED1925E2650 /* libPods-PXInfiniteScrollView.a in Frameworks */,
+				FB75C7668CEF937BC19D69FB /* libPods-PXInfiniteScrollView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,33 +134,46 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				C8EDE412FA8591AD06143DF7 /* libPods-Tests.a in Frameworks */,
+				ADCDB53ECC33F9831A093432 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55142AB31C77A11200A9696D /* Swift */ = {
+		4B3E36D21E4D3ADA00E15A7E /* PXInfiniteScrollViewSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
-				55142AB51C77A1B400A9696D /* AppDelegate.swift */,
+				4B3E36D31E4D3ADA00E15A7E /* AppDelegate.swift */,
 				55142AB61C77A1B400A9696D /* View.swift */,
-				55142AB71C77A1B400A9696D /* ViewController.swift */,
+				4B3E36D51E4D3ADA00E15A7E /* ViewController.swift */,
+				4B3E36DF1E4D3ADA00E15A7E /* Info.plist */,
 				55142AB41C77A1B400A9696D /* PXInfiniteScrollView-Bridging-Header.h */,
 			);
-			name = Swift;
+			path = PXInfiniteScrollViewSwiftExample;
+			sourceTree = "<group>";
+		};
+		4B3E36E71E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4B3E36E81E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests.swift */,
+				4B3E36EA1E4D3ADB00E15A7E /* Info.plist */,
+			);
+			path = PXInfiniteScrollViewSwiftExampleTests;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				4B3E36F31E4D3CC800E15A7E /* Default-568h@2x.png */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* PXInfiniteScrollView */,
 				6003F5B5195388D20070C39A /* Tests */,
+				4B3E36D21E4D3ADA00E15A7E /* PXInfiniteScrollViewSwiftExample */,
+				4B3E36E71E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				DB42097BB1EFA43919CCD355 /* Pods */,
+				67C588A894F52937BE737258 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +182,8 @@
 			children = (
 				6003F58A195388D20070C39A /* PXInfiniteScrollView.app */,
 				6003F5AE195388D20070C39A /* Tests.xctest */,
+				4B3E36D11E4D3ADA00E15A7E /* PXInfiniteScrollViewSwiftExample.app */,
+				4B3E36E41E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,8 +195,10 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				985F52D93A6D99F00DD0B10A /* libPods-PXInfiniteScrollView.a */,
-				A378737C36722F1669FB66E0 /* libPods-Tests.a */,
+				2886E623D412893F6E9C856C /* libPods-PXInfiniteScrollView.a */,
+				F0C5DB53CE7E8276B42D5680 /* libPods-Tests.a */,
+				24F1227510FBE001125775B6 /* libPods-PXInfiniteScrollViewSwiftExample.a */,
+				7EB4A3808E84207EBC0A6097 /* libPods-PXInfiniteScrollViewSwiftExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,7 +206,6 @@
 		6003F593195388D20070C39A /* PXInfiniteScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				55142AB31C77A11200A9696D /* Swift */,
 				6003F59C195388D20070C39A /* PXAppDelegate.h */,
 				6003F59D195388D20070C39A /* PXAppDelegate.m */,
 				6003F5A5195388D20070C39A /* PXViewController.h */,
@@ -202,13 +258,17 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		DB42097BB1EFA43919CCD355 /* Pods */ = {
+		67C588A894F52937BE737258 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F3509E80C471601E4A48CBC9 /* Pods-PXInfiniteScrollView.debug.xcconfig */,
-				9096C68A55E3B01F9CE8EECD /* Pods-PXInfiniteScrollView.release.xcconfig */,
-				3FD90B744E721C0913838E81 /* Pods-Tests.debug.xcconfig */,
-				71D4D433928D6323AFE991F0 /* Pods-Tests.release.xcconfig */,
+				8A715F45C9962588E521B03B /* Pods-PXInfiniteScrollView.debug.xcconfig */,
+				71F2137748ABD370BEAFA5A4 /* Pods-PXInfiniteScrollView.release.xcconfig */,
+				D6F27D6A289A2EE64A43E3F3 /* Pods-Tests.debug.xcconfig */,
+				5DD4701B4288F9F50C1AA8FE /* Pods-Tests.release.xcconfig */,
+				DE10B1B50CE706AADBBC4AF5 /* Pods-PXInfiniteScrollViewSwiftExample.debug.xcconfig */,
+				7530693AB6C012ECE6E50509 /* Pods-PXInfiniteScrollViewSwiftExample.release.xcconfig */,
+				6DC389E1BCEF7B791F18B091 /* Pods-PXInfiniteScrollViewSwiftExampleTests.debug.xcconfig */,
+				1599E948ECF31779D12CF7F7 /* Pods-PXInfiniteScrollViewSwiftExampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -216,16 +276,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4B3E36D01E4D3ADA00E15A7E /* PXInfiniteScrollViewSwiftExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B3E36EF1E4D3ADB00E15A7E /* Build configuration list for PBXNativeTarget "PXInfiniteScrollViewSwiftExample" */;
+			buildPhases = (
+				78E198289B12331DB367731A /* [CP] Check Pods Manifest.lock */,
+				4B3E36CD1E4D3ADA00E15A7E /* Sources */,
+				4B3E36CE1E4D3ADA00E15A7E /* Frameworks */,
+				4B3E36CF1E4D3ADA00E15A7E /* Resources */,
+				8F5400177F904E2640464A58 /* [CP] Embed Pods Frameworks */,
+				855283212CC405C01F6AE1AD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PXInfiniteScrollViewSwiftExample;
+			productName = PXInfiniteScrollViewSwiftExample;
+			productReference = 4B3E36D11E4D3ADA00E15A7E /* PXInfiniteScrollViewSwiftExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4B3E36E31E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B3E36F01E4D3ADB00E15A7E /* Build configuration list for PBXNativeTarget "PXInfiniteScrollViewSwiftExampleTests" */;
+			buildPhases = (
+				A78D4BEBC3FFF4093831CFF8 /* [CP] Check Pods Manifest.lock */,
+				4B3E36E01E4D3ADB00E15A7E /* Sources */,
+				4B3E36E11E4D3ADB00E15A7E /* Frameworks */,
+				4B3E36E21E4D3ADB00E15A7E /* Resources */,
+				BADCBFD077A8E2268B74A57F /* [CP] Embed Pods Frameworks */,
+				5DB1D1EC0C0537C2188E0D15 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B3E36E61E4D3ADB00E15A7E /* PBXTargetDependency */,
+			);
+			name = PXInfiniteScrollViewSwiftExampleTests;
+			productName = PXInfiniteScrollViewSwiftExampleTests;
+			productReference = 4B3E36E41E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6003F589195388D20070C39A /* PXInfiniteScrollView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "PXInfiniteScrollView" */;
 			buildPhases = (
-				15D9B7E1C00005450B7B94A1 /* Check Pods Manifest.lock */,
+				40FDAB3739CDD19945AEF9E6 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				6CB615E2C4D35E0DBA5074D7 /* Copy Pods Resources */,
-				2B13677DA2DE1E98CE6D4FC5 /* Embed Pods Frameworks */,
+				D4E974DAA5F80472626190A1 /* [CP] Embed Pods Frameworks */,
+				5B09E8374DC1F357CC9EFDB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,12 +341,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				8E190B5E801CE0ACCF265202 /* Check Pods Manifest.lock */,
+				5DAAFD1C602B99B398AEF810 /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				A56D38DDA785F35C9956F9DB /* Copy Pods Resources */,
-				2213F56C5BA0FD7F94657C20 /* Embed Pods Frameworks */,
+				369237FEF3E9DD025EBEE44B /* [CP] Embed Pods Frameworks */,
+				70ACC05D2236192E05A03908 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,10 +365,22 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PX;
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Daniel Blakemore";
 				TargetAttributes = {
+					4B3E36D01E4D3ADA00E15A7E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					4B3E36E31E4D3ADB00E15A7E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4B3E36D01E4D3ADA00E15A7E;
+					};
+					6003F589195388D20070C39A = {
+						LastSwiftMigration = 0820;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -288,11 +401,29 @@
 			targets = (
 				6003F589195388D20070C39A /* PXInfiniteScrollView */,
 				6003F5AD195388D20070C39A /* Tests */,
+				4B3E36D01E4D3ADA00E15A7E /* PXInfiniteScrollViewSwiftExample */,
+				4B3E36E31E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4B3E36CF1E4D3ADA00E15A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3E36F21E4D3B5F00E15A7E /* Images.xcassets in Resources */,
+				4B3E36F41E4D3CC800E15A7E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B3E36E21E4D3ADB00E15A7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F588195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,29 +444,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15D9B7E1C00005450B7B94A1 /* Check Pods Manifest.lock */ = {
+		369237FEF3E9DD025EBEE44B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2213F56C5BA0FD7F94657C20 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,29 +459,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2B13677DA2DE1E98CE6D4FC5 /* Embed Pods Frameworks */ = {
+		40FDAB3739CDD19945AEF9E6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXInfiniteScrollView/Pods-PXInfiniteScrollView-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6CB615E2C4D35E0DBA5074D7 /* Copy Pods Resources */ = {
+		5B09E8374DC1F357CC9EFDB9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,29 +489,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXInfiniteScrollView/Pods-PXInfiniteScrollView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8E190B5E801CE0ACCF265202 /* Check Pods Manifest.lock */ = {
+		5DAAFD1C602B99B398AEF810 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A56D38DDA785F35C9956F9DB /* Copy Pods Resources */ = {
+		5DB1D1EC0C0537C2188E0D15 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXInfiniteScrollViewSwiftExampleTests/Pods-PXInfiniteScrollViewSwiftExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70ACC05D2236192E05A03908 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,19 +534,124 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		78E198289B12331DB367731A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		855283212CC405C01F6AE1AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXInfiniteScrollViewSwiftExample/Pods-PXInfiniteScrollViewSwiftExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F5400177F904E2640464A58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXInfiniteScrollViewSwiftExample/Pods-PXInfiniteScrollViewSwiftExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A78D4BEBC3FFF4093831CFF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BADCBFD077A8E2268B74A57F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXInfiniteScrollViewSwiftExampleTests/Pods-PXInfiniteScrollViewSwiftExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4E974DAA5F80472626190A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PXInfiniteScrollView/Pods-PXInfiniteScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4B3E36CD1E4D3ADA00E15A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3E36D61E4D3ADA00E15A7E /* ViewController.swift in Sources */,
+				4B3E36D41E4D3ADA00E15A7E /* AppDelegate.swift in Sources */,
+				4B3E36F11E4D3B1F00E15A7E /* View.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B3E36E01E4D3ADB00E15A7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3E36E91E4D3ADB00E15A7E /* PXInfiniteScrollViewSwiftExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* PXAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* PXViewController.m in Sources */,
-				55142AB91C77A1B400A9696D /* View.swift in Sources */,
 				2C53E7481B275BA000123705 /* PXView.m in Sources */,
-				55142ABA1C77A1B400A9696D /* ViewController.swift in Sources */,
-				55142AB81C77A1B400A9696D /* AppDelegate.swift in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +667,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4B3E36E61E4D3ADB00E15A7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B3E36D01E4D3ADA00E15A7E /* PXInfiniteScrollViewSwiftExample */;
+			targetProxy = 4B3E36E51E4D3ADB00E15A7E /* PBXContainerItemProxy */;
+		};
 		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* PXInfiniteScrollView */;
@@ -458,6 +699,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4B3E36EB1E4D3ADB00E15A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE10B1B50CE706AADBBC4AF5 /* Pods-PXInfiniteScrollViewSwiftExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = PXInfiniteScrollViewSwiftExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.PXInfiniteScrollViewSwiftExample.PXInfiniteScrollViewSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "PXInfiniteScrollView/PXInfiniteScrollView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4B3E36EC1E4D3ADB00E15A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7530693AB6C012ECE6E50509 /* Pods-PXInfiniteScrollViewSwiftExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = PXInfiniteScrollViewSwiftExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.PXInfiniteScrollViewSwiftExample.PXInfiniteScrollViewSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PXInfiniteScrollView/PXInfiniteScrollView-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		4B3E36ED1E4D3ADB00E15A7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DC389E1BCEF7B791F18B091 /* Pods-PXInfiniteScrollViewSwiftExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = PXInfiniteScrollViewSwiftExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.PXInfiniteScrollViewSwiftExample.PXInfiniteScrollViewSwiftExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PXInfiniteScrollViewSwiftExample.app/PXInfiniteScrollViewSwiftExample";
+			};
+			name = Debug;
+		};
+		4B3E36EE1E4D3ADB00E15A7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1599E948ECF31779D12CF7F7 /* Pods-PXInfiniteScrollViewSwiftExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = PXInfiniteScrollViewSwiftExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.PXInfiniteScrollViewSwiftExample.PXInfiniteScrollViewSwiftExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PXInfiniteScrollViewSwiftExample.app/PXInfiniteScrollViewSwiftExample";
+			};
+			name = Release;
+		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -471,14 +794,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -491,7 +819,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,21 +839,27 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -533,7 +867,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3509E80C471601E4A48CBC9 /* Pods-PXInfiniteScrollView.debug.xcconfig */;
+			baseConfigurationReference = 8A715F45C9962588E521B03B /* Pods-PXInfiniteScrollView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -546,13 +880,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PXInfiniteScrollView/PXInfiniteScrollView-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9096C68A55E3B01F9CE8EECD /* Pods-PXInfiniteScrollView.release.xcconfig */;
+			baseConfigurationReference = 71F2137748ABD370BEAFA5A4 /* Pods-PXInfiniteScrollView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -564,13 +899,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PXInfiniteScrollView/PXInfiniteScrollView-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		6003F5C3195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FD90B744E721C0913838E81 /* Pods-Tests.debug.xcconfig */;
+			baseConfigurationReference = D6F27D6A289A2EE64A43E3F3 /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PXInfiniteScrollView.app/PXInfiniteScrollView";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -594,7 +930,7 @@
 		};
 		6003F5C4195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71D4D433928D6323AFE991F0 /* Pods-Tests.release.xcconfig */;
+			baseConfigurationReference = 5DD4701B4288F9F50C1AA8FE /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PXInfiniteScrollView.app/PXInfiniteScrollView";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -615,6 +951,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4B3E36EF1E4D3ADB00E15A7E /* Build configuration list for PBXNativeTarget "PXInfiniteScrollViewSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B3E36EB1E4D3ADB00E15A7E /* Debug */,
+				4B3E36EC1E4D3ADB00E15A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B3E36F01E4D3ADB00E15A7E /* Build configuration list for PBXNativeTarget "PXInfiniteScrollViewSwiftExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B3E36ED1E4D3ADB00E15A7E /* Debug */,
+				4B3E36EE1E4D3ADB00E15A7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "PXInfiniteScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

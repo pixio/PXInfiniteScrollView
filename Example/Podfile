@@ -1,11 +1,17 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'PXInfiniteScrollView', :exclusive => true do
+target 'PXInfiniteScrollView' do
   pod "PXInfiniteScrollView", :path => "../"
 end
 
-target 'Tests', :exclusive => true do
+target 'Tests' do
   pod "PXInfiniteScrollView", :path => "../"
+end
 
+target 'PXInfiniteScrollViewSwiftExample' do
+    pod "PXInfiniteScrollView", :path => "../"
+end
 
+target 'PXInfiniteScrollViewSwiftExampleTests' do
+    pod "PXInfiniteScrollView", :path => "../"
 end

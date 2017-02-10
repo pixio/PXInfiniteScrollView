@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "PXAppDelegate.h"
-#import "PXInfiniteScrollView-Swift.h"
+//#import "PXInfiniteScrollView-Swift.h"
 
 int main(int argc, char * argv[])
 {
