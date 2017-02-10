@@ -152,7 +152,7 @@ static inline NSInteger posMod(NSInteger numerator, NSInteger denominator)
     return posMod(center / pageSize, pageCount);
 }
 
-- (void)setCurrentPage:(NSInteger)currentPage
+- (void) setCurrentPage:(NSInteger)currentPage
 {
     [self setCurrentPage:currentPage animated:FALSE];
 }
@@ -197,7 +197,14 @@ static inline NSInteger posMod(NSInteger numerator, NSInteger denominator)
 
 - (UIView*) currentPageView
 {
-    return _pages[[self currentPage]];
+    if ([self pageCount] > 0)
+    {
+        return _pages[[self currentPage]];
+    }
+    else
+    {
+        return nil;
+    }
 }
 
 #pragma mark UIScrollView methods
