@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger, PXInfiniteScrollViewDirection) {
 /**
  *  An array of UIView objects that are paged.
  */
-@property (nonatomic, copy, nullable) NSArray* pages;
+@property (nonatomic, copy, nullable) NSArray<UIView *> * pages;
 @property (nonatomic, readonly) NSUInteger pageCount;
 
 /**
